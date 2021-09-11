@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   API:
-    image: "ms-curso"
+    image: "emersson/servicecurso:v1"
     ports:
       - "8080:8080"
     environment:
@@ -30,6 +30,7 @@ services:
 # docker service ls
 # docker stack deploy -c docker-compose.yml nomedoservico
 # docker service update --publish-add 8080:8080 servicecurso
+# docker service update --replicas 5 servicecurso_API
 
 # docker service rm <SERVICE>
 # docker kill <SERVICE>
