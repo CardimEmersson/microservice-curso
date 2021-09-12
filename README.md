@@ -6,10 +6,10 @@
 Tecnologias utilizadas:
 =================
 <!--ts-->
-* [Docker](#docker)
-* [Docker Swarm](#docker-swarm)
-* [Spring Boot](#spring-boot)
-* [PostgreSQL](#postgree-sql)
+* [Docker](https://www.docker.com/)
+* [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy/)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [PostgreSQL](https://www.postgresql.org/)
  
 <!--te-->
 
