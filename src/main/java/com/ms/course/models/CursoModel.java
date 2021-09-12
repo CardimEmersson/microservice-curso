@@ -6,6 +6,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 //com o lombok não preciso utilizar os métodos get/set
 @Data
@@ -16,17 +17,16 @@ import java.time.LocalDateTime;
 public class CursoModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    //anotando essa variavel como id
     @Id
-    //ele é gerado automaticamente
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigoCurso;
     private String nomeCurso;
     private String qtdPeriodo;
     private String cargaHoraria;
-    //o texto pode passar de 255 caracteres
     @Column(columnDefinition = "TEXT")
     private String descricaoCurso;
+    @OneToMany
+    private List<MateriaModel> listaMaterias;
     private LocalDateTime dataEnvioCurso;
     private StatusCurso statusCurso;
 }

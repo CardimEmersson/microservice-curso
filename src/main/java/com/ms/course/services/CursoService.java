@@ -23,23 +23,8 @@ public class CursoService {
 
     public CursoModel enviarCurso(CursoModel cursoModel) {
         cursoModel.setDataEnvioCurso(LocalDateTime.now());
-
         cursoModel.setStatusCurso(StatusCurso.SENT);
+
         return cursoRepository.save(cursoModel);
-
-        /*
-         try {
-            SimpleMailMessage mensagem = new SimpleMailMessage();
-            mensagem.setFrom(emailModel.getEmailFrom());
-            mensagem.setTo(emailModel.getEmailTo());
-            mensagem.setSubject(emailModel.getSubject());
-            mensagem.setText(emailModel.getText());
-        } catch (MailException e) {
-            cursoModel.setStatusCurso(StatusCurso.ERROR);
-        } finally {
-            return emailRepository.save(emailModel);
-        }
-         */
-
     }
 }

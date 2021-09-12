@@ -1,9 +1,11 @@
 package com.ms.course.dtos;
 
+import com.ms.course.models.RequisitoModel;
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 @Data
 public class MateriaDto {
@@ -14,8 +16,8 @@ public class MateriaDto {
     private String cargaHoraria;
     @NotBlank
     private String descricaoMateria;
-    @NotBlank
-    private String requisitos;
+    @NotEmpty
+    private List<RequisitoDto> listaRequisitos;
     @NotBlank
     private String creditos;
     @NotBlank

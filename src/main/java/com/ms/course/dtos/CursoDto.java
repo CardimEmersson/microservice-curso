@@ -1,8 +1,11 @@
 package com.ms.course.dtos;
 
+import com.ms.course.models.MateriaModel;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 //class que receberá as informações do método POST
 @Data
@@ -17,4 +20,6 @@ public class CursoDto {
     private String cargaHoraria;
     @NotBlank
     private String descricaoCurso;
+    @NotEmpty
+    private List<MateriaDto> listaMaterias;
 }
