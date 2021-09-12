@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 //class que receberá as informações do método POST
@@ -14,10 +15,10 @@ public class CursoDto {
     //caso receba vazio, ele já envia uma bad request pro usuário
     @NotBlank
     private String nomeCurso;
-    @NotBlank
-    private String qtdPeriodo;
-    @NotBlank
-    private String cargaHoraria;
+    @NotNull
+    private int qtdPeriodo;
+    @NotNull
+    private int cargaHoraria;
     @NotBlank
     private String descricaoCurso;
     @NotEmpty

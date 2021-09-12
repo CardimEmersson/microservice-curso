@@ -21,8 +21,8 @@ public class CursoModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigoCurso;
     private String nomeCurso;
-    private String qtdPeriodo;
-    private String cargaHoraria;
+    private int qtdPeriodo;
+    private int cargaHoraria;
     @Column(columnDefinition = "TEXT")
     private String descricaoCurso;
     @OneToMany

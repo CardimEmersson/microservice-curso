@@ -15,11 +15,11 @@ public class MateriaModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long codigoMateria;
     private String nomeMateria;
-    private String cargaHoraria;
+    private int cargaHoraria;
     @Column(columnDefinition = "TEXT")
     private String descricaoMateria;
     @OneToMany
     private List<RequisitoModel> listaRequisitos;
-    private String creditos;
+    private int creditos;
     private String ementa;
 }
