@@ -33,7 +33,7 @@ public class CursoController {
     CursoService cursoService;
 
     /*
-        Método abaixo... Funções:
+        Método abaixo.. Funções:
         - Receber o DTO de entrada
         - fazer a validação
         - passar do dto para o model
